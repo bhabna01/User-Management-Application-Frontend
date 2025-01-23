@@ -8,12 +8,12 @@ const Toolbar = ({ onBlock, onUnblock, onDelete }) => {
         Block
       </button>
       <button className="btn btn-secondary me-2" onClick={onUnblock}>
-        <FaLockOpen className="me-2" />
-        Unblock
+        <FaLockOpen/>
+        
       </button>
       <button className="btn btn-danger" onClick={onDelete}>
-        <FaTrash className="me-2" />
-        Delete
+        <FaTrash />
+       
       </button>
     </div>
   );

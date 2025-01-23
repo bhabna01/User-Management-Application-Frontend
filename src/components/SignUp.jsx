@@ -2,6 +2,7 @@ import { FaEnvelope, FaUser, FaLock } from "react-icons/fa";
 import axios from "axios";
 import img from "../assets/login.jpg"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
     const [name, setName] = useState("");
@@ -9,7 +10,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
+  const navigate = useNavigate();
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
@@ -23,6 +24,7 @@ const SignUp = () => {
       setName("");
       setEmail("");
       setPassword("");
+      navigate('/login');
     } catch (err) {
       setError(err.response?.data?.error || "Something went wrong");
       setSuccess("");
