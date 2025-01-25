@@ -3,6 +3,7 @@ import img from "../assets/login.jpg"
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +18,7 @@ const Login = () => {
       console.log('Token stored:', response.data.token); // Debugging: Log the token
       navigate('/admin'); // Redirect to admin panel
     } catch (error) {
-      alert(error.response.data.error);
+      toast.error(error.response.data.error);
     }
   };
     return (
