@@ -32,7 +32,7 @@ const Login = () => {
           style={{ width: "80%", maxWidth: "400px" }}
           onSubmit={handleLogin}
         >
-          <h3 className="mb-3">Start your journey</h3>
+          
           <h4 className="mb-4">Sign In to The App</h4>
           {error && <div className="alert alert-danger">{error}</div>}
           {/* Email Field */}

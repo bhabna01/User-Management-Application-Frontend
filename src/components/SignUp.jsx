@@ -174,7 +174,7 @@ const SignUp = () => {
           style={{ width: "80%", maxWidth: "400px" }}
           onSubmit={handleSignup}
         >
-          <h3 className="mb-3">Get Started</h3>
+         
           <h4 className="mb-4">Sign Up for The App</h4>
 
           {/* Name Field */}
@@ -245,7 +245,7 @@ const SignUp = () => {
 
         {/* Links */}
         <div className="mt-3">
-          <a href="/login">Already have an account? Sign in</a>
+          <a href="/">Already have an account? Sign in</a>
         </div>
       </div>
 
